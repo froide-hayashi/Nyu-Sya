@@ -1,0 +1,45 @@
+﻿@model Nyu_Sya.Models.EnqueteViewModel
+@{
+    ViewBag.Title = "入社時アンケート";
+}
+
+<h2>入社時アンケート</h2>
+
+<div class="jumbotron">
+    <p>入社時に必要となる提出書類の確認のため</p>
+    <p>下記のアンケートに答えてください</p>
+</div>
+<div>
+    @using (Html.BeginForm())
+    {
+        <p><strong>Q1.@Html.LabelFor(m => m.fuyou)</strong></p>
+        <ul class="list-group">
+            <li class="list-group-item">@Html.RadioButtonFor(m => m.fuyou, true)扶養家族あり</li>
+            <li class="list-group-item">@Html.RadioButtonFor(m => m.fuyou, false)扶養家族なし</li>
+        </ul>
+
+        <p><strong>Q2.@Html.LabelFor(m => m.syotoku)</strong></p>
+        <ul class="list-group">
+            <li class="list-group-item">@Html.RadioButtonFor(m => m.fuyou, true)あり</li>
+            <li class="list-group-item">@Html.RadioButtonFor(m => m.fuyou, false)なし</li>
+        </ul>
+
+        <p><strong>Q3.@Html.LabelFor(m => m.juminzei)</strong>※今年度(平成27年1月1日～)給与所得について</p>
+        <div>
+            <ul class="list-group">
+                <li class="list-group-item">@Html.RadioButtonFor(m => m.juminzei, 1)一括納付済(個別納付)</li>
+                <li class="list-group-item">@Html.RadioButtonFor(m => m.juminzei, 2)分割納付(個別納付)</li>
+                <li class="list-group-item">@Html.RadioButtonFor(m => m.juminzei, 3)継続支払希望(法人納付)</li>
+                <li class="list-group-item">@Html.RadioButtonFor(m => m.juminzei, 0)なし</li>
+            </ul>
+        </div>
+
+        <p><strong>Q4.@Html.LabelFor(m => m.koyouhoken)</strong></p>
+        <ul class="list-group">
+            <li class="list-group-item">@Html.RadioButtonFor(m => m.fuyou, true)あり</li>
+            <li class="list-group-item">@Html.RadioButtonFor(m => m.fuyou, false)なし</li>
+        </ul>
+
+        <input type="submit" value="次へ" class="btn btn-success" />
+    }
+</div>

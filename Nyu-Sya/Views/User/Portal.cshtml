@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewBag.Title = "Portal";
+}
+
+<div class="jumbotron">
+    <p>@User.Identity.Name</p>さんこんにちは
+</div>
+
+<p>@Html.ActionLink("入社アンケート", "Enquete", null, new { @class = "btn btn-info" })</p>
