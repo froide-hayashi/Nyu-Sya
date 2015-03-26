@@ -215,6 +215,8 @@
       <DependentUpon>Entities.edmx</DependentUpon>
       <LastGenOutput>Entities.cs</LastGenOutput>
     </Content>
+    <Content Include="App_GlobalResources\Files\fuyouari.pdf" />
+    <Content Include="App_GlobalResources\Files\fuyounashi.pdf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
